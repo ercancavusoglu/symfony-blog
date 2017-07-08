@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Blogs list</h1>
+
+    <ul class="list-unstyled list-inline">
+        <li>
+            <a class="btn btn-primary" href="{{ path('blog_new') }}">Create a new blog</a>
+        </li>
+    </ul>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Slug</th>
+                <th>Content</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for blog in blogs %}
+            <tr>
+                <td><a href="{{ path('blog_show', { 'id': blog.id }) }}">{{ blog.id }}</a></td>
+                <td>{{ blog.title }}</td>
+                <td>{{ blog.slug }}</td>
+                <td>
+                    {{ blog.content|length > 50 ? blog.content|slice(0, 50) ~ '...' : blog.content  }}
+                </td>
+                <td>
+                    {{ blog.category.title }}
+                </td>
+                <td>
+                    <ul class="list-unstyled list-inline">
+                        <li>
+                            <a class="btn btn-info" href="{{ path('blog_show', { 'id': blog.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-default" href="{{ path('blog_edit', { 'id': blog.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

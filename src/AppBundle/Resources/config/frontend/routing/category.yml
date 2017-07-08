@@ -1,0 +1,4 @@
+frontend_category_show:
+    path:     /category/{slug}
+    defaults: { _controller: "AppBundle:Frontend/Category:show" }
+    methods:  GET

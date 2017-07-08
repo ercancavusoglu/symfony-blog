@@ -1,0 +1,10 @@
+app_home:
+  prefix: /
+  resource: '@AppBundle/Controller/Frontend/'
+  #type: annotation
+
+app_blog:
+    resource: "@AppBundle/Resources/config/frontend/routing/blog.yml"
+
+app_category:
+    resource: "@AppBundle/Resources/config/frontend/routing/category.yml"

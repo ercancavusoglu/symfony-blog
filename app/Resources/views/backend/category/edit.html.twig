@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Category edit</h1>
+
+    {% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
+
+    {{ form_start(edit_form) }}
+    {{ form_widget(edit_form) }}
+    <br/>
+    <input type="submit" value="Edit" class="btn btn-info"/>
+    {{ form_end(edit_form) }}
+
+    <hr/>
+
+    <ul class="list-unstyled list-inline">
+        <li>
+            <a class="btn btn-primary" href="{{ path('category_index') }}">Back to the list</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Delete" class="btn btn-danger">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

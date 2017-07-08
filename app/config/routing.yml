@@ -1,0 +1,15 @@
+#app:
+#    resource: '@AppBundle/Controller/Frontend/'
+#    type: annotation
+app:
+  resource: '@AppBundle/Resources/config/frontend/routing.yml'
+
+
+# app/config/routing.yml
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
+panel_blog:
+    resource: '@AppBundle/Resources/config/backend/routing.yml'
+    prefix: /admin

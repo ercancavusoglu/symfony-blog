@@ -1,0 +1,12 @@
+app_blog:
+    resource: "@AppBundle/Resources/config/backend/routing/blog.yml"
+    prefix:   /blog
+
+app_category:
+    resource: "@AppBundle/Resources/config/backend/routing/category.yml"
+    prefix:   /category
+
+app_dashboard:
+    defaults: { _controller: "AppBundle:Backend/Dashboard:index" }
+    path:     /
+    methods:  GET

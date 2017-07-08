@@ -1,0 +1,8 @@
+frontend_blog_show:
+    path:     /blog/{slug}
+    defaults: { _controller: "AppBundle:Frontend/Blog:show" }
+    methods:  GET
+
+frontend_blog_search:
+    path:     /search
+    defaults: { _controller: AppBundle:Frontend/Blog:search }
