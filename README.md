@@ -11,7 +11,7 @@ A Symfony project created on July 7, 2017, 5:37 pm.
     #create database
     php bin/console doctrine:database:create
         
-    #add migrations
+    #add migrations(entities) to database
     php bin/console doctrine:schema:update --force
      
     #Add User
